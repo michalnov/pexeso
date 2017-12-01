@@ -6,7 +6,7 @@
     <link rel="stylesheet" type="text/css" href="css/stylecss.css">
     <script src="script/script.js"></script>
   </head>
-  <body>
+  <body onload="generate()">
     <div>
       <img src="img/logo.jpg" style="width:700px; margin:0 auto;">
   </div>
@@ -14,28 +14,28 @@
     <div id="gameboard" style="width:700px; margin:0 auto;">
       <table width="640">
             <tr>
-              <td> <img src="img/cover.jpg" class="card" id="img1" data-alter-src="" onclick="clickimg(1)"> </td>
-              <td> <img src="img/cover.jpg" class="card" id="img2" data-alter-src="" onclick="clickimg(2)"> </td>
-              <td> <img src="img/cover.jpg" class="card" id="img3" data-alter-src="" onclick="clickimg(3)"> </td>
-              <td> <img src="img/cover.jpg" class="card" id="img4" data-alter-src="" onclick="clickimg(4)"> </td>
+              <td> <img src="img/cover.jpg" class="card" id="img1" data-altersrc="" onclick="solver(1)"> </td>
+              <td> <img src="img/cover.jpg" class="card" id="img2" data-altersrc="" onclick="solver(2)"> </td>
+              <td> <img src="img/cover.jpg" class="card" id="img3" data-altersrc="" onclick="solver(3)"> </td>
+              <td> <img src="img/cover.jpg" class="card" id="img4" data-altersrc="" onclick="solver(4)"> </td>
             </tr>
             <tr>
-              <td> <img src="img/cover.jpg" class="card" id="img5" data-alter-src="" onclick="clickimg(5)"> </td>
-              <td> <img src="img/cover.jpg" class="card" id="img6" data-alter-src="" onclick="clickimg(6)"> </td>
-              <td> <img src="img/cover.jpg" class="card" id="img7" data-alter-src="" onclick="clickimg(7)"> </td>
-              <td> <img src="img/cover.jpg" class="card" id="img8" data-alter-src="" onclick="clickimg(8)"> </td>
+              <td> <img src="img/cover.jpg" class="card" id="img5" data-altersrc="" onclick="solver(5)"> </td>
+              <td> <img src="img/cover.jpg" class="card" id="img6" data-altersrc="" onclick="solver(6)"> </td>
+              <td> <img src="img/cover.jpg" class="card" id="img7" data-altersrc="" onclick="solver(7)"> </td>
+              <td> <img src="img/cover.jpg" class="card" id="img8" data-altersrc="" onclick="solver(8)"> </td>
             </tr>
             <tr>
-              <td> <img src="img/cover.jpg" class="card" id="img9" data-alter-src="" onclick="clickimg(9)"> </td>
-              <td> <img src="img/cover.jpg" class="card" id="img10" data-alter-src="" onclick="clickimg(10)"> </td>
-              <td> <img src="img/cover.jpg" class="card" id="img11" data-alter-src="" onclick="clickimg(11)"> </td>
-              <td> <img src="img/cover.jpg" class="card" id="img12" data-alter-src="" onclick="clickimg(12)"> </td>
+              <td> <img src="img/cover.jpg" class="card" id="img9" data-altersrc="" onclick="solver(9)"> </td>
+              <td> <img src="img/cover.jpg" class="card" id="img10" data-altersrc="" onclick="solver(10)"> </td>
+              <td> <img src="img/cover.jpg" class="card" id="img11" data-altersrc="" onclick="solver(11)"> </td>
+              <td> <img src="img/cover.jpg" class="card" id="img12" data-altersrc="" onclick="solver(12)"> </td>
             </tr>
             <tr>
-              <td> <img src="img/cover.jpg" class="card" id="img13" data-alter-src="" onclick="clickimg(13)"> </td>
-              <td> <img src="img/cover.jpg" class="card" id="img14" data-alter-src="" onclick="clickimg(14)"> </td>
-              <td> <img src="img/cover.jpg" class="card" id="img15" data-alter-src="" onclick="clickimg(15)"> </td>
-              <td> <img src="img/cover.jpg" class="card" id="img16" data-alter-src="" onclick="clickimg(16)"> </td>
+              <td> <img src="img/cover.jpg" class="card" id="img13" data-altersrc="" onclick="solver(13)"> </td>
+              <td> <img src="img/cover.jpg" class="card" id="img14" data-altersrc="" onclick="solver(14)"> </td>
+              <td> <img src="img/cover.jpg" class="card" id="img15" data-altersrc="" onclick="solver(15)"> </td>
+              <td> <img src="img/cover.jpg" class="card" id="img16" data-altersrc="" onclick="solver(16)"> </td>
             </tr>
             </table>
     </div>

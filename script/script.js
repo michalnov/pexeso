@@ -5,21 +5,23 @@ var field = [ [1,1,2,2],[3,3,4,4],[5,5,6,6,],[7,7,8,8] ] ;
 var clicked = [0,0]
 
 function solver(newclick) {
-	if (window.clicked[0] == 0) {
-		window.clicked[0] = newclick;
-		document.getElementById(window.clicked[0]).src = document.getElementById(window.clicked[0].getAttribute("data-alter-src").value);
+	if (clicked[0] == 0) {
+		clicked[0] = "img"+newclick;
+		document.getElementById("img"+newclick).src = document.getElementById("img"+newclick).dataset.altersrc;
 		return;
 	}
 	else if (window.clicked[1] == 0) {
-		window.clicked[1] = newclick;
-		document.getElementById(window.clicked[1]).src = document.getElementById(window.clicked[1].getAttribute("data-alter-src").value);
+		window.clicked[1] = "img"+newclick;
+		document.getElementById("img"+newclick).src = document.getElementById("img"+newclick).dataset.altersrc;
 	}
 	//resolve
-	var img1 = document.getElementById(window.clicked[0]).getAttribute("data-alter-src").value;
-	var img2 = document.getElementById(window.clicked[1]).getAttribute("data-alter-src").value;
+	console.log(clicked);
+	var img1 = document.getElementById(clicked[0]).dataset.altersrc;
+	var img2 = document.getElementById(clicked[1]).dataset.altersrc;
+	console.log(img1);
+	console.log(img2);
 	if (img1 == img2) {
-		document.getElementById(clicked[0]).src = "img/correct.png";
-		document.getElementById(clicked[1]).src = "img/correct.png";
+		setTimeout(correct, 1000);
 		if (window.player == 1) {
 			window.score1 = parseInt(parseInt(window.score1.value)+parseInt("1"));
 		}
@@ -28,8 +30,13 @@ function solver(newclick) {
 		}
 	}
 	else {
-		setTimeout(clear, 2000);
+		setTimeout(clear, 1000);
 	}
+}
+
+function correct() {
+	document.getElementById(clicked[0]).src = "img/correct.png";
+	document.getElementById(clicked[1]).src = "img/correct.png";
 	window.clicked[0] = 0;
 	window.clicked[1] = 0;
 }
@@ -47,47 +54,29 @@ function clear() {
 	window.clicked[1] = 0;
 }
 
-
-//console.log(field);
-shuffle();
-function shuffle() {
-	var i;
-	for (i=0;i<20;i++)
-	{
-	var r1=Math.floor( Math.random()*4 );
-	var c1=Math.floor( Math.random()*4 );
-	var r2=Math.floor( Math.random()*4 );
-	var c2=Math.floor( Math.random()*4 );
-	temp = field[r1][c1];
-	field[r1][c1]=field[r2][c2];
-	field[r2][c2]=temp;
-	}
-	console.log("Shuffle");
-	console.log(field);
-
-}
-function clickimg(value){
-	var row=Math.floor(value/10);
-	var col=value%10;
-	//console.log("You click row"+row+"col:"+col);
-	if (field[row][col]) {
-		var source="img/img"+field[row][col]+".png";
-		var imageid="img"+row+col;
-		console.log(imageid);
-		document.getElementById(imageid).src=source;
-
-	}
-
-}
-
 function generate(){
 	var possible = [1,2,3,4,5,6,7,8,1,2,3,4,5,6,7,8];
-	var dymensionX = 4;
-	var dymensionY = 4;
 	var output = [];
 	var swap = 0;
-	var i = 0;
+	for (var i = 1; i < 17; i++) {
+		swap = "img/img"+possible[i-1]+".png";
+		var it = document.getElementById("img"+i);
+		it.dataset.altersrc = swap;
+		it.width = 150;
+		it.height = 150;
+	}
+	i = 1;
+	var j;
 	do {
+		j = Math.floor((Math.random() * 15) + 1);
+		if (possible[j] == 0) {
 
-	} while (i < possible.length);
+		}
+		else {
+			swap = "img/img"+possible[j]+".png";
+			document.getElementById("img"+i).dataset.altersrc = swap;
+			possible[j] == 0;
+			i++;
+		}
+	} while (i < 17);
 }
