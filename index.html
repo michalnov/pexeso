@@ -14,32 +14,36 @@
     <div id="gameboard" style="width:700px; margin:0 auto;">
       <table width="640">
             <tr>
-              <td> <img src="img/cover.jpg" class="card" id="img1" data-altersrc="" onclick="solver(1)"> </td>
-              <td> <img src="img/cover.jpg" class="card" id="img2" data-altersrc="" onclick="solver(2)"> </td>
-              <td> <img src="img/cover.jpg" class="card" id="img3" data-altersrc="" onclick="solver(3)"> </td>
-              <td> <img src="img/cover.jpg" class="card" id="img4" data-altersrc="" onclick="solver(4)"> </td>
+              <td> <img src="img/cover.jpg" class="card" id="img1" data-altersrc="" onclick="solver('img1')"> </td>
+              <td> <img src="img/cover.jpg" class="card" id="img2" data-altersrc="" onclick="solver('img2')"> </td>
+              <td> <img src="img/cover.jpg" class="card" id="img3" data-altersrc="" onclick="solver('img3')"> </td>
+              <td> <img src="img/cover.jpg" class="card" id="img4" data-altersrc="" onclick="solver('img4')"> </td>
             </tr>
             <tr>
-              <td> <img src="img/cover.jpg" class="card" id="img5" data-altersrc="" onclick="solver(5)"> </td>
-              <td> <img src="img/cover.jpg" class="card" id="img6" data-altersrc="" onclick="solver(6)"> </td>
-              <td> <img src="img/cover.jpg" class="card" id="img7" data-altersrc="" onclick="solver(7)"> </td>
-              <td> <img src="img/cover.jpg" class="card" id="img8" data-altersrc="" onclick="solver(8)"> </td>
+              <td> <img src="img/cover.jpg" class="card" id="img5" data-altersrc="" onclick="solver('img5')"> </td>
+              <td> <img src="img/cover.jpg" class="card" id="img6" data-altersrc="" onclick="solver('img6')"> </td>
+              <td> <img src="img/cover.jpg" class="card" id="img7" data-altersrc="" onclick="solver('img7')"> </td>
+              <td> <img src="img/cover.jpg" class="card" id="img8" data-altersrc="" onclick="solver('img8')"> </td>
             </tr>
             <tr>
-              <td> <img src="img/cover.jpg" class="card" id="img9" data-altersrc="" onclick="solver(9)"> </td>
-              <td> <img src="img/cover.jpg" class="card" id="img10" data-altersrc="" onclick="solver(10)"> </td>
-              <td> <img src="img/cover.jpg" class="card" id="img11" data-altersrc="" onclick="solver(11)"> </td>
-              <td> <img src="img/cover.jpg" class="card" id="img12" data-altersrc="" onclick="solver(12)"> </td>
+              <td> <img src="img/cover.jpg" class="card" id="img9" data-altersrc="" onclick="solver('img9')"> </td>
+              <td> <img src="img/cover.jpg" class="card" id="img10" data-altersrc="" onclick="solver('img10')"> </td>
+              <td> <img src="img/cover.jpg" class="card" id="img11" data-altersrc="" onclick="solver('img11')"> </td>
+              <td> <img src="img/cover.jpg" class="card" id="img12" data-altersrc="" onclick="solver('img12')"> </td>
             </tr>
             <tr>
-              <td> <img src="img/cover.jpg" class="card" id="img13" data-altersrc="" onclick="solver(13)"> </td>
-              <td> <img src="img/cover.jpg" class="card" id="img14" data-altersrc="" onclick="solver(14)"> </td>
-              <td> <img src="img/cover.jpg" class="card" id="img15" data-altersrc="" onclick="solver(15)"> </td>
-              <td> <img src="img/cover.jpg" class="card" id="img16" data-altersrc="" onclick="solver(16)"> </td>
+              <td> <img src="img/cover.jpg" class="card" id="img13" data-altersrc="" onclick="solver('img13')"> </td>
+              <td> <img src="img/cover.jpg" class="card" id="img14" data-altersrc="" onclick="solver('img14')"> </td>
+              <td> <img src="img/cover.jpg" class="card" id="img15" data-altersrc="" onclick="solver('img15')"> </td>
+              <td> <img src="img/cover.jpg" class="card" id="img16" data-altersrc="" onclick="solver('img16')"> </td>
             </tr>
             </table>
     </div>
-
+<input type="text" id="pl1" value="" readonly>
+<br>
+<input type="text" id="pl2" value="" readonly>
+<br>
+<input type="button" onclick="generate()" value="REGEN">
 
 </body>
 </html>
