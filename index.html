@@ -10,40 +10,41 @@
     <div>
       <img src="img/logo.jpg" style="width:700px; margin:0 auto;">
   </div>
+    <div>
 
+    </div>
     <div id="gameboard" style="width:700px; margin:0 auto;">
       <table width="640">
+        <input type="text" id="pl1" value="" readonly>  <input type="text" id="pl2" value="" readonly>
+        <br>
+        <h1 id="active" style="color: red;">Player's 1 turn</h1>
+
             <tr>
-              <td> <img src="img/cover.jpg" class="card" id="img1" data-altersrc="" onclick="solver('img1')"> </td>
-              <td> <img src="img/cover.jpg" class="card" id="img2" data-altersrc="" onclick="solver('img2')"> </td>
-              <td> <img src="img/cover.jpg" class="card" id="img3" data-altersrc="" onclick="solver('img3')"> </td>
-              <td> <img src="img/cover.jpg" class="card" id="img4" data-altersrc="" onclick="solver('img4')"> </td>
+              <td> <img src="img/cover.jpg" class="card" id="img1" data-altersrc="" data-checked="no" onclick="solver('img1')"> </td>
+              <td> <img src="img/cover.jpg" class="card" id="img2" data-altersrc="" data-checked="no" onclick="solver('img2')"> </td>
+              <td> <img src="img/cover.jpg" class="card" id="img3" data-altersrc="" data-checked="no" onclick="solver('img3')"> </td>
+              <td> <img src="img/cover.jpg" class="card" id="img4" data-altersrc="" data-checked="no" onclick="solver('img4')"> </td>
             </tr>
             <tr>
-              <td> <img src="img/cover.jpg" class="card" id="img5" data-altersrc="" onclick="solver('img5')"> </td>
-              <td> <img src="img/cover.jpg" class="card" id="img6" data-altersrc="" onclick="solver('img6')"> </td>
-              <td> <img src="img/cover.jpg" class="card" id="img7" data-altersrc="" onclick="solver('img7')"> </td>
-              <td> <img src="img/cover.jpg" class="card" id="img8" data-altersrc="" onclick="solver('img8')"> </td>
+              <td> <img src="img/cover.jpg" class="card" id="img5" data-altersrc="" data-checked="no" onclick="solver('img5')"> </td>
+              <td> <img src="img/cover.jpg" class="card" id="img6" data-altersrc="" data-checked="no" onclick="solver('img6')"> </td>
+              <td> <img src="img/cover.jpg" class="card" id="img7" data-altersrc="" data-checked="no" onclick="solver('img7')"> </td>
+              <td> <img src="img/cover.jpg" class="card" id="img8" data-altersrc="" data-checked="no" onclick="solver('img8')"> </td>
             </tr>
             <tr>
-              <td> <img src="img/cover.jpg" class="card" id="img9" data-altersrc="" onclick="solver('img9')"> </td>
-              <td> <img src="img/cover.jpg" class="card" id="img10" data-altersrc="" onclick="solver('img10')"> </td>
-              <td> <img src="img/cover.jpg" class="card" id="img11" data-altersrc="" onclick="solver('img11')"> </td>
-              <td> <img src="img/cover.jpg" class="card" id="img12" data-altersrc="" onclick="solver('img12')"> </td>
+              <td> <img src="img/cover.jpg" class="card" id="img9" data-altersrc="" data-checked="no" onclick="solver('img9')"> </td>
+              <td> <img src="img/cover.jpg" class="card" id="img10" data-altersrc="" data-checked="no" onclick="solver('img10')"> </td>
+              <td> <img src="img/cover.jpg" class="card" id="img11" data-altersrc="" data-checked="no" onclick="solver('img11')"> </td>
+              <td> <img src="img/cover.jpg" class="card" id="img12" data-altersrc="" data-checked="no" onclick="solver('img12')"> </td>
             </tr>
             <tr>
-              <td> <img src="img/cover.jpg" class="card" id="img13" data-altersrc="" onclick="solver('img13')"> </td>
-              <td> <img src="img/cover.jpg" class="card" id="img14" data-altersrc="" onclick="solver('img14')"> </td>
-              <td> <img src="img/cover.jpg" class="card" id="img15" data-altersrc="" onclick="solver('img15')"> </td>
-              <td> <img src="img/cover.jpg" class="card" id="img16" data-altersrc="" onclick="solver('img16')"> </td>
+              <td> <img src="img/cover.jpg" class="card" id="img13" data-altersrc="" data-checked="no" onclick="solver('img13')"> </td>
+              <td> <img src="img/cover.jpg" class="card" id="img14" data-altersrc="" data-checked="no" onclick="solver('img14')"> </td>
+              <td> <img src="img/cover.jpg" class="card" id="img15" data-altersrc="" data-checked="no" onclick="solver('img15')"> </td>
+              <td> <img src="img/cover.jpg" class="card" id="img16" data-altersrc="" data-checked="no" onclick="solver('img16')"> </td>
             </tr>
             </table>
     </div>
-<input type="text" id="pl1" value="" readonly>
-<br>
-<input type="text" id="pl2" value="" readonly>
-<br>
-<input type="button" onclick="generate()" value="REGEN">
 
 </body>
 </html>

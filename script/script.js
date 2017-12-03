@@ -5,13 +5,19 @@ var field = [ [1,1,2,2],[3,3,4,4],[5,5,6,6,],[7,7,8,8] ] ;
 var clicked = [0,0];
 
 function solver(newclick) {
+	var checked = document.getElementById(newclick).dataset.checked;
+	if (checked == "yes") {
+		return;
+	}
+	else {
+	}
 	if (clicked[0] == 0 && clicked[0] != newclick) {
 		clicked[0] = newclick;
 		document.getElementById(newclick).src = document.getElementById(newclick).dataset.altersrc;
 		//document.getElementById(clicked[0]).onclick = "";
 		return;
 	}
-	else if (window.clicked[1] == 0 && clicked[1] != newclick) {
+	else if (window.clicked[1] == 0 && clicked[0] != newclick) {
 		window.clicked[1] = newclick;
 		document.getElementById(newclick).src = document.getElementById(newclick).dataset.altersrc;
 		//document.getElementById(clicked[1]).onclick = "";
@@ -41,13 +47,14 @@ function solver(newclick) {
 		console.log("incorrect");
 		score();
 	}
+	//score();
 }
 
 function correct() {
 	document.getElementById(clicked[0]).src = "img/correct.png";
-	document.getElementById(clicked[0]).onclick = "";
+	document.getElementById(clicked[0]).dataset.checked = "yes";
 	document.getElementById(clicked[1]).src = "img/correct.png";
-	document.getElementById(clicked[1]).onclick = "";
+	document.getElementById(clicked[1]).dataset.checked = "yes";
 	window.clicked[0] = 0;
 	window.clicked[1] = 0;
 }
@@ -63,9 +70,11 @@ function clear() {
 	//console.log(swap2);
 	if (window.player == 1) {
 		window.player = 2;
+		score();
 	}
 	else {
 		window.player = 1;
+		score();
 	}
 	window.clicked[0] = 0;
 	window.clicked[1] = 0;
@@ -74,31 +83,27 @@ function clear() {
 function score() {
 	document.getElementById("pl1").value = "Player 1 score: "+parseInt(score1);
 	document.getElementById("pl2").value = "Player 2 score: "+parseInt(score2);
+	if (player == 1) {
+		document.getElementById("active").innerHTML = "Player's 1 turn";
+		document.getElementById("active").style.color = "red";
+	}
+	else {
+		document.getElementById("active").innerHTML = "Player's 2 turn";
+		document.getElementById("active").style.color = "blue";
+	}
 	var total = parseInt(score1) + parseInt(score2);
 	if (total == 8) {
 		if (score1 > score2) {
-			alert("Player 1 is winer");
+			alert("Winner is: Player 1");
 			generate();
-			score1 = 0;
-			score2 = 0;
-			clicked[0] = 0;
-			clicked[1] = 0;
 		}
 		else if (score2 > score1) {
-			alert("Player 2 is winer");
+			alert("Winner is: Player 2");
 			generate();
-			score1 = 0;
-			score2 = 0;
-			clicked[0] = 0;
-			clicked[1] = 0;
 		}
 		else {
 			alert("??");
 			generate();
-			score1 = 0;
-			score2 = 0;
-			clicked[0] = 0;
-			clicked[1] = 0;
 		}
 	}
 }
@@ -108,8 +113,9 @@ function generate(){
 	score2 = 0;
 	clicked[0] = 0;
 	clicked[1] = 0;
+	player = 1;
 	var possible = [1,2,3,4,5,6,7,8,1,2,3,4,5,6,7,8];
-	var output = [];
+	//var output = [];
 	var swap = 0;
 	for (var i = 1; i < 17; i++) {
 		swap = "img/img"+possible[i-1]+".png";
@@ -132,6 +138,7 @@ function generate(){
 		else {
 			swap = "img/img"+possible[j-1]+".png";
 			document.getElementById("img"+i).dataset.altersrc = swap;
+			document.getElementById("img"+i).dataset.checked = "no";
 			console.log(possible[j-1]);
 			possible[j-1] = 0;
 			i++;
